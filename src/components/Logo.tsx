@@ -3,20 +3,20 @@ import Image from 'next/image';
 
 interface LogoProps {
   size?: 'desktop' | 'mobile';
+  logo: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ size = 'desktop' }) => {
-  const width = size === 'mobile' ? 105.38 : 169.27;
-  const height = size === 'mobile' ? 44.98 : 72.25;
+const Logo: React.FC<LogoProps> = ({ size = 'desktop', logo }) => {
   return (
-    <Image
-      src="/logo.png"
-      alt="Fametonic Logo"
-      width={width}
-      height={height}
-      priority
-      className={size === 'mobile' ? 'mx-auto' : ''}
-    />
+    <div className={`logo ${size === 'mobile' ? 'logo-mobile' : 'logo-desktop'}`}> 
+      <Image
+        src={logo}
+        alt="Fametonic Logo"
+        fill
+        style={{ objectFit: 'contain' }}
+        priority
+      />
+    </div>
   );
 };
 

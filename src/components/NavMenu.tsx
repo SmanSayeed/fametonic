@@ -1,9 +1,18 @@
 import React from 'react';
+import { menus } from '@/constants/data';
 
-const NavMenu: React.FC = () => (
-  <nav className="flex gap-8 items-center">
-    <a className="font-figtree font-semibold text-[18px] text-white text-center align-middle" href="#">About us</a>
-    <a className="font-figtree font-semibold text-[18px] text-white text-center align-middle" href="#">Contact</a>
+const NavMenu: React.FC<{ isMobile?: boolean; onClickMenu?: () => void }> = ({ isMobile = false, onClickMenu }) => (
+  <nav className={`nav-menu${isMobile ? ' nav-menu-mobile' : ' nav-menu-desktop'}`}> 
+    {menus.map((menu) => (
+      <a
+        key={menu.name}
+        href={menu.link}
+        className="nav-menu-item"
+        onClick={onClickMenu}
+      >
+        {menu.name}
+      </a>
+    ))}
   </nav>
 );
 

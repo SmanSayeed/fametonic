@@ -4,9 +4,11 @@ import NavHeader from './NavHeader';
 
 const HomeLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div className="min-h-screen bg-bg">
-    <TopHeader />
-    <NavHeader />
-    {children}
+     <TopHeader />
+    <div className="container">
+      <NavHeader />
+      {children}
+    </div>
   </div>
 );
 
