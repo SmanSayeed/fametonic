@@ -67,6 +67,9 @@ body {
   align-items: start;
   justify-content: space-between;
   background: transparent;
+  @media (max-width: 900px) {
+    align-items: center;
+  }
   .nav-header-logo {
     display: flex;
     align-items: center;
