@@ -1,103 +1,42 @@
-import Image from "next/image";
+import Typography from '@/components/Typography';
+import ListItem from '@/components/ListItem';
+import Button from '@/components/Button';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <main className="flex flex-row desktop:px-[211px] mobile:px-[44px] w-full max-w-[1440px] mx-auto gap-8 mobile:flex-col mobile:items-center">
+      {/* Left Content */}
+      <section className="flex flex-col justify-center w-[516px] mobile:w-full z-10">
+        <h1 className="font-urbanist font-bold text-[2.188rem] text-white mb-2 mobile:text-[25px] mobile:text-center mobile:text-gray">Want to Turn Social Media Into a Profitable Career?</h1>
+        <h2 className="font-urbanist font-bold text-[2.188rem] text-[#00E7F9] mb-6 drop-shadow-pink mobile:text-[25px] mobile:text-center" style={{textShadow: '0px 4px 4px #FC004E'}}>
+          Discover your way to success with Fametonic:
+        </h2>
+        <ul className="mb-8 mobile:mb-6">
+          <ListItem text="Start growing your influence right away—no waiting required!" />
+          <ListItem text="Create viral TikToks and Reels step by step with easy-to-follow lessons" />
+          <ListItem text="Use a Personal AI Worker to boost your content" />
+          <ListItem text="Learn from expert-led courses designed for aspiring influencers" />
+        </ul>
+        <div className="flex flex-col items-start mobile:items-center py-[30px] gap-1">
+          <Button className="mobile:hidden">GET STARTED &gt;</Button>
+          <Button className="hidden mobile:flex w-[350px]">GET STARTED &gt;</Button>
+          <span className="font-figtree font-normal text-[12px] leading-4 text-white text-center">1-minute quiz for personalized Insights</span>
+        </div>
+        <Typography variant="small" color="lightgray" className="mb-2 text-left mobile:text-center">By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms</Typography>
+        <Typography variant="small" color="white" className="text-left mobile:text-center">Fametonic 2025 ©All Rights Reserved.</Typography>
+      </section>
+      {/* Right Image (Desktop) / Top Image (Mobile) */}
+      <section className="flex-1 flex justify-center items-center relative mobile:order-first mobile:mb-6">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/Influe_mobile_mockup.png"
+          alt="Fametonic App Mockup"
+          width={390}
+          height={426}
+          className="mobile:mx-auto mobile:w-[390px] mobile:h-[426px]"
           priority
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
