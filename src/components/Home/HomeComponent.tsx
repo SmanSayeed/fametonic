@@ -4,8 +4,8 @@ import './Home.scss';
 
 const HomeComponent = () => (
   <div className="home-root">
-    <LeftContent />
     <RightContent />
+    <LeftContent />
   </div>
 );
 
