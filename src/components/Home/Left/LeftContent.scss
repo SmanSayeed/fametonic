@@ -1,0 +1,109 @@
+@use '../../../styles/theme.scss' as *;
+// Add any LeftContent-specific overrides here if needed 
+
+.home-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 516px;
+  z-index: 10;
+  @include mobile {
+    width: 100%;
+    padding: 0 24px;
+  }
+}
+
+.home-title {
+  font-family: $font-urbanist;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: $color-white;
+  margin-bottom: 0.5rem;
+  @include mobile {
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.home-subtitle-text {
+  font-family: $font-urbanist;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: $color-accent;
+  /* Neon multi-shadow for Figma-accurate look */
+  text-shadow:
+    2px 2px 0 #fc004e,
+    0px 4px 4px #fc004e,
+    0px 0px 2px #00e7f9;
+  margin-bottom: 1.5rem;
+  @include mobile {
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.home-list {
+  margin-bottom: 2rem;
+  font-family: $font-figtree;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: $color-white;
+
+  @include mobile {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+}
+
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.home-actions-subtext {
+  font-family: $font-figtree;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.home-legal {
+  margin-bottom: 0.5rem;
+  .home-legal-terms {
+    text-align: left;
+    @include mobile {
+      text-align: center;
+    }
+  }
+  .home-legal-copyright {
+    text-align: left;
+    @include mobile {
+      text-align: center;
+    }
+  }
+} 

@@ -14,4 +14,10 @@ $font-nunito: 'Nunito', sans-serif;
 
 // Shadows
 $shadow-pink: 0px 4px 4px 0px #FC004E;
-$shadow-blue: 2px 2px 10px 0px #00E7F9; 
+$shadow-blue: 2px 2px 10px 0px #00E7F9;
+
+@mixin mobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+} 

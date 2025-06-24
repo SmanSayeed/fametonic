@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from 'react';
-import Logo from './Logo';
+import Logo from '../Logo/Logo';
 import NavMenu from './NavMenu';
-import BurgerMenu from './BurgerMenu';
+import BurgerMenu from '../NavHeader/BurgerMenu';
 const logo = "/logo.png";
 
 const Navbar: React.FC = () => {

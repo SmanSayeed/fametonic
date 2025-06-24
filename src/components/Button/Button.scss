@@ -1,0 +1,33 @@
+@use '../../styles/theme.scss' as *;
+
+.button {
+  width: 313px;
+  height: 40px;
+  padding: 8px 40px;
+  border-radius: 10px;
+  background-color: $color-primary;
+  color: $color-white;
+  font-family: $font-figtree;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  box-shadow: 2px 2px 10px 0px $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: darken($color-primary, 5%);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $color-accent;
+  }
+} 

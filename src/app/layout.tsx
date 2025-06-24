@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import HomeLayout from "@/components/HomeLayout";
+import HomeLayout from "@/components/Layout/HomeLayout";
 import { Figtree, Urbanist, Nunito } from "next/font/google";
 
 const figtree = Figtree({

@@ -1,0 +1,36 @@
+@use '../../styles/theme.scss' as *;
+
+// @use '../../styles/globals.scss' as *; // Only needed if you use global resets or variables from globals
+
+.home-root {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 2rem;
+  
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.home-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: url('/Influe_mobile_mockup.png') no-repeat center center;
+  background-size: contain;
+  @include mobile {
+    order: -1;
+    width: 100vw;
+    height: 426px;
+    margin-bottom: 1.5rem;
+    background: url('/Influe_mobile_mockup.png') no-repeat center center;
+    background-size: contain;
+  }
+} 

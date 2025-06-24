@@ -23,3 +23,18 @@ export const menus: MenuItem[] = [
     link: '/contact'
   }
 ];
+
+export const homeData = {
+  title: 'Want to Turn Social Media Into a Profitable Career?',
+  subtitle: 'Discover your way to success with Fametonic:',
+  list: [
+    'Start growing your influence right away—no waiting required!',
+    'Create viral TikToks and Reels step by step with easy-to-follow lessons',
+    'Use a Personal AI Worker to boost your content',
+    'Learn from expert-led courses designed for aspiring influencers',
+  ],
+  buttonText: 'GET STARTED >',
+  buttonSubtext: '1-minute quiz for personalized Insights',
+  legal1: 'By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms',
+  legal2: 'Fametonic 2025 ©All Rights Reserved.'
+};
