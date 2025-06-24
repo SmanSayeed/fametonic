@@ -10,8 +10,10 @@ const LeftContent = () => (
     <HomeTitle />
     <HomeSubtitle />
     <HomeList />
-    <HomeActions />
-    <HomeLegal />
+    <div className="home-actions-legal-wrapper">
+      <HomeActions />
+      <HomeLegal />
+    </div>
   </section>
 );
 

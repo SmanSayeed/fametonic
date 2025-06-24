@@ -3,10 +3,10 @@ import { homeData } from '@/constants/data';
 
 const HomeLegal = () => (
   <div className="home-legal">
-    <Typography variant="small" color="lightgray" className="home-legal-terms">
+    <Typography variant="small" className="home-legal-terms">
       {homeData.legal1}
     </Typography>
-    <Typography variant="small" color="white" className="home-legal-copyright">
+    <Typography className="typography-legal2 home-legal-copyright">
       {homeData.legal2}
     </Typography>
   </div>

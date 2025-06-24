@@ -66,6 +66,15 @@
   }
 }
 
+.home-actions-legal-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include mobile {
+    flex-direction: column-reverse;
+  }
+}
+
 .home-actions {
   display: flex;
   flex-direction: column;
@@ -93,17 +102,23 @@
 }
 
 .home-legal {
+  font-family: $font-figtree;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: $color-light-gray;
   margin-bottom: 0.5rem;
-  .home-legal-terms {
+  width: 100%;
+  .home-legal-terms, .home-legal-copyright {
+    color: $color-light-gray;
     text-align: left;
     @include mobile {
       text-align: center;
     }
   }
-  .home-legal-copyright {
-    text-align: left;
-    @include mobile {
-      text-align: center;
-    }
+  @include mobile {
+    text-align: center;
   }
 } 
